@@ -1,0 +1,437 @@
+[
+  {
+    "scheme_name": "Ayushman Bharat - PM-JAY",
+    "description": "India's largest government-funded health insurance scheme providing up to ₹5 lakh per family per year for secondary and tertiary hospitalisation. Covers over 1,900 medical procedures across empanelled hospitals.",
+    "supported_states": [
+      "All"
+    ],
+    "diseases_covered": [
+      "cancer",
+      "heart disease",
+      "kidney disease",
+      "liver disease",
+      "diabetes",
+      "hypertension",
+      "stroke",
+      "tuberculosis",
+      "respiratory disease",
+      "orthopaedic",
+      "neurological",
+      "burns",
+      "eye disease",
+      "ear disease",
+      "mental health",
+      "general surgery"
+    ],
+    "max_income": 300000,
+    "min_age": 0,
+    "max_age": 100,
+    "gender_requirement": "any",
+    "bpl_required": false,
+    "disability_support": true,
+    "pregnancy_support": true,
+    "senior_citizen_support": true,
+    "benefit_score": 90,
+    "required_documents": [
+      "Aadhaar Card",
+      "Ration Card or PM-JAY eligibility letter",
+      "Income Certificate",
+      "Caste Certificate (if applicable)"
+    ],
+    "hospital_support": true,
+    "emergency_support": true
+  },
+  {
+    "scheme_name": "PM National Dialysis Programme",
+    "description": "Provides free dialysis services to BPL patients suffering from kidney failure at government district hospitals. Covers haemodialysis sessions, consumables, and transportation support.",
+    "supported_states": [
+      "All"
+    ],
+    "diseases_covered": [
+      "kidney disease",
+      "kidney failure",
+      "chronic kidney disease",
+      "renal failure",
+      "dialysis",
+      "nephritis"
+    ],
+    "max_income": 250000,
+    "min_age": 0,
+    "max_age": 100,
+    "gender_requirement": "any",
+    "bpl_required": true,
+    "disability_support": false,
+    "pregnancy_support": false,
+    "senior_citizen_support": true,
+    "benefit_score": 95,
+    "required_documents": [
+      "Aadhaar Card",
+      "BPL Card",
+      "Medical Certificate from nephrologist",
+      "Income Certificate"
+    ],
+    "hospital_support": true,
+    "emergency_support": true
+  },
+  {
+    "scheme_name": "Rashtriya Arogya Nidhi (RAN)",
+    "description": "Provides one-time financial assistance up to ₹15 lakh to BPL patients suffering from life-threatening diseases. Covers treatment at central government hospitals across India.",
+    "supported_states": [
+      "All"
+    ],
+    "diseases_covered": [
+      "cancer",
+      "kidney disease",
+      "kidney failure",
+      "liver disease",
+      "heart disease",
+      "bone marrow disorder",
+      "thalassaemia",
+      "aplastic anaemia",
+      "sickle cell anaemia"
+    ],
+    "max_income": 120000,
+    "min_age": 0,
+    "max_age": 100,
+    "gender_requirement": "any",
+    "bpl_required": true,
+    "disability_support": false,
+    "pregnancy_support": false,
+    "senior_citizen_support": false,
+    "benefit_score": 85,
+    "required_documents": [
+      "Aadhaar Card",
+      "BPL Ration Card",
+      "Medical Certificate from treating physician",
+      "Income Certificate",
+      "Referral letter from district hospital"
+    ],
+    "hospital_support": true,
+    "emergency_support": false
+  },
+  {
+    "scheme_name": "National Cancer Control Programme",
+    "description": "Provides early detection, treatment, and palliative care for cancer patients. Covers chemotherapy, radiation therapy, and surgical oncology at government cancer institutes.",
+    "supported_states": [
+      "All"
+    ],
+    "diseases_covered": [
+      "cancer",
+      "breast cancer",
+      "cervical cancer",
+      "oral cancer",
+      "lung cancer",
+      "colorectal cancer",
+      "leukaemia",
+      "lymphoma",
+      "prostate cancer",
+      "stomach cancer"
+    ],
+    "max_income": 500000,
+    "min_age": 0,
+    "max_age": 100,
+    "gender_requirement": "any",
+    "bpl_required": false,
+    "disability_support": false,
+    "pregnancy_support": false,
+    "senior_citizen_support": true,
+    "benefit_score": 88,
+    "required_documents": [
+      "Aadhaar Card",
+      "Biopsy / Pathology Report",
+      "Income Certificate",
+      "Referral from primary physician"
+    ],
+    "hospital_support": true,
+    "emergency_support": true
+  },
+  {
+    "scheme_name": "Pradhan Mantri Matru Vandana Yojana (PMMVY)",
+    "description": "Cash incentive scheme for pregnant women and lactating mothers for the first live birth. Provides ₹5,000 in three installments to support health and nutrition during pregnancy.",
+    "supported_states": [
+      "All"
+    ],
+    "diseases_covered": [
+      "pregnancy",
+      "maternity",
+      "prenatal care",
+      "postnatal care",
+      "anaemia"
+    ],
+    "max_income": 800000,
+    "min_age": 19,
+    "max_age": 45,
+    "gender_requirement": "female",
+    "bpl_required": false,
+    "disability_support": false,
+    "pregnancy_support": true,
+    "senior_citizen_support": false,
+    "benefit_score": 80,
+    "required_documents": [
+      "Aadhaar Card",
+      "Bank Account Details",
+      "MCP Card (Mother Child Protection card)",
+      "Proof of pregnancy"
+    ],
+    "hospital_support": true,
+    "emergency_support": false
+  },
+  {
+    "scheme_name": "Janani Suraksha Yojana (JSY)",
+    "description": "Safe motherhood intervention scheme promoting institutional delivery among pregnant women, especially in low-performing states. Provides cash assistance and free delivery care at government hospitals.",
+    "supported_states": [
+      "Uttar Pradesh",
+      "Bihar",
+      "Rajasthan",
+      "Madhya Pradesh",
+      "Jharkhand",
+      "Odisha",
+      "Uttarakhand",
+      "Chhattisgarh",
+      "Assam",
+      "Jammu And Kashmir"
+    ],
+    "diseases_covered": [
+      "pregnancy",
+      "maternity",
+      "delivery",
+      "prenatal care",
+      "postnatal care",
+      "obstetric complication"
+    ],
+    "max_income": 400000,
+    "min_age": 18,
+    "max_age": 45,
+    "gender_requirement": "female",
+    "bpl_required": false,
+    "disability_support": false,
+    "pregnancy_support": true,
+    "senior_citizen_support": false,
+    "benefit_score": 78,
+    "required_documents": [
+      "Aadhaar Card",
+      "BPL Card (preferred)",
+      "JSY Card",
+      "Bank Account Details"
+    ],
+    "hospital_support": true,
+    "emergency_support": true
+  },
+  {
+    "scheme_name": "National Programme for Senior Citizens (NAPSrC)",
+    "description": "Provides dedicated healthcare services, separate OPD queues, geriatric wards, home-based care, and medicines to senior citizens at government health facilities.",
+    "supported_states": [
+      "All"
+    ],
+    "diseases_covered": [
+      "diabetes",
+      "hypertension",
+      "arthritis",
+      "osteoporosis",
+      "dementia",
+      "alzheimers",
+      "heart disease",
+      "kidney disease",
+      "respiratory disease",
+      "vision loss",
+      "hearing loss",
+      "cancer",
+      "incontinence",
+      "falls",
+      "depression",
+      "general geriatric care"
+    ],
+    "max_income": 1000000,
+    "min_age": 60,
+    "max_age": 100,
+    "gender_requirement": "any",
+    "bpl_required": false,
+    "disability_support": true,
+    "pregnancy_support": false,
+    "senior_citizen_support": true,
+    "benefit_score": 85,
+    "required_documents": [
+      "Aadhaar Card",
+      "Age Proof (Birth Certificate or Passport)",
+      "Medical records"
+    ],
+    "hospital_support": true,
+    "emergency_support": true
+  },
+  {
+    "scheme_name": "Disability Healthcare Support Scheme (DHSS)",
+    "description": "Provides free assistive devices, physiotherapy, corrective surgery, and rehabilitation services to persons with disabilities under the ADIP (Assistance to Disabled Persons) programme.",
+    "supported_states": [
+      "All"
+    ],
+    "diseases_covered": [
+      "disability",
+      "physical disability",
+      "visual impairment",
+      "hearing impairment",
+      "locomotor disability",
+      "cerebral palsy",
+      "autism",
+      "intellectual disability",
+      "multiple sclerosis",
+      "spinal injury",
+      "muscular dystrophy"
+    ],
+    "max_income": 200000,
+    "min_age": 0,
+    "max_age": 100,
+    "gender_requirement": "any",
+    "bpl_required": false,
+    "disability_support": true,
+    "pregnancy_support": false,
+    "senior_citizen_support": true,
+    "benefit_score": 82,
+    "required_documents": [
+      "Aadhaar Card",
+      "Disability Certificate (from CMO)",
+      "Income Certificate",
+      "Passport-size photographs"
+    ],
+    "hospital_support": true,
+    "emergency_support": false
+  },
+  {
+    "scheme_name": "Mahatma Jyotiba Phule Jan Arogya Yojana (MJPJAY)",
+    "description": "Maharashtra state scheme covering 996 medical procedures for BPL and low-income families. Provides up to ₹1.5 lakh per family per year at empanelled government and private hospitals.",
+    "supported_states": [
+      "Maharashtra"
+    ],
+    "diseases_covered": [
+      "heart disease",
+      "cancer",
+      "kidney disease",
+      "diabetes",
+      "liver disease",
+      "stroke",
+      "orthopaedic",
+      "burns",
+      "general surgery",
+      "neurological",
+      "eye disease"
+    ],
+    "max_income": 100000,
+    "min_age": 0,
+    "max_age": 100,
+    "gender_requirement": "any",
+    "bpl_required": false,
+    "disability_support": true,
+    "pregnancy_support": true,
+    "senior_citizen_support": true,
+    "benefit_score": 88,
+    "required_documents": [
+      "Aadhaar Card",
+      "Yellow or Orange Ration Card",
+      "Income Certificate",
+      "Domicile Certificate (Maharashtra)"
+    ],
+    "hospital_support": true,
+    "emergency_support": true
+  },
+  {
+    "scheme_name": "Tamil Nadu Chief Minister Health Insurance Scheme (CMCHIS)",
+    "description": "State scheme offering up to ₹5 lakh per family per year for 1,027 medical procedures to government employees and low-income families in Tamil Nadu.",
+    "supported_states": [
+      "Tamil Nadu"
+    ],
+    "diseases_covered": [
+      "cancer",
+      "kidney disease",
+      "heart disease",
+      "liver disease",
+      "neurological",
+      "orthopaedic",
+      "general surgery",
+      "burns",
+      "stroke",
+      "diabetes complications"
+    ],
+    "max_income": 72000,
+    "min_age": 0,
+    "max_age": 100,
+    "gender_requirement": "any",
+    "bpl_required": false,
+    "disability_support": true,
+    "pregnancy_support": true,
+    "senior_citizen_support": true,
+    "benefit_score": 87,
+    "required_documents": [
+      "Aadhaar Card",
+      "Tamil Nadu Ration Card",
+      "Income Certificate",
+      "CMCHIS Smart Card"
+    ],
+    "hospital_support": true,
+    "emergency_support": true
+  },
+  {
+    "scheme_name": "Aam Aadmi Bima Yojana (AABY)",
+    "description": "Social security scheme for landless rural households providing life and disability cover, plus scholarship for children of insured members. Covers accidental death and total/partial disability.",
+    "supported_states": [
+      "All"
+    ],
+    "diseases_covered": [
+      "accidental injury",
+      "disability",
+      "physical disability",
+      "locomotor disability"
+    ],
+    "max_income": 150000,
+    "min_age": 18,
+    "max_age": 59,
+    "gender_requirement": "any",
+    "bpl_required": true,
+    "disability_support": true,
+    "pregnancy_support": false,
+    "senior_citizen_support": false,
+    "benefit_score": 70,
+    "required_documents": [
+      "Aadhaar Card",
+      "BPL Card",
+      "Income Certificate",
+      "Bank Account Details"
+    ],
+    "hospital_support": false,
+    "emergency_support": false
+  },
+  {
+    "scheme_name": "National Mental Health Programme (NMHP)",
+    "description": "Provides free mental health services including psychiatry outpatient care, counselling, and medicines at district mental health clinics and government hospitals across India.",
+    "supported_states": [
+      "All"
+    ],
+    "diseases_covered": [
+      "mental health",
+      "depression",
+      "anxiety",
+      "schizophrenia",
+      "bipolar disorder",
+      "dementia",
+      "alzheimers",
+      "substance abuse",
+      "ptsd",
+      "obsessive compulsive disorder",
+      "autism"
+    ],
+    "max_income": 1000000,
+    "min_age": 0,
+    "max_age": 100,
+    "gender_requirement": "any",
+    "bpl_required": false,
+    "disability_support": true,
+    "pregnancy_support": false,
+    "senior_citizen_support": true,
+    "benefit_score": 75,
+    "required_documents": [
+      "Aadhaar Card",
+      "Referral from primary physician (optional)",
+      "Medical records (if available)"
+    ],
+    "hospital_support": true,
+    "emergency_support": false
+  }
+]

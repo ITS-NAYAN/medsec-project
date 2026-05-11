@@ -1,0 +1,42 @@
+version: "3.9"
+
+services:
+
+  medsec-postgres:
+    image: postgres:16
+
+    container_name: medsec-postgres
+
+    environment:
+      POSTGRES_USER: medsec_final
+      POSTGRES_PASSWORD: Medsec2424
+      POSTGRES_DB: medsec_db
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+    restart: unless-stopped
+
+
+  backend:
+    build: ./backend
+
+    container_name: medsec-backend
+
+    ports:
+      - "8000:8000"
+
+    depends_on:
+      - medsec-postgres
+
+    environment:
+      DATABASE_URL: postgresql://medsec_final:Medsec2424@medsec-postgres:5432/medsec_db
+
+    restart: unless-stopped
+
+
+volumes:
+  postgres_data:
