@@ -3,7 +3,7 @@ import './style.css';
 
 // ── Constants ────────────────────────────────────────────────────────────────
 
-const API = 'http://localhost:8000/api/v1/check-eligibility';
+const API = 'http://localhost:8000/ai/api/v1/check-eligibility';
 
 const INDIAN_STATES = [
   'Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh',

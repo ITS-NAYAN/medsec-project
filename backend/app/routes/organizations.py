@@ -8,6 +8,8 @@ from app.schemas.organization import (
     OrganizationOut,
 )
 
+from app.core.dependencies import require_role
+
 router = APIRouter(
     prefix="/organizations",
     tags=["Organizations"],
@@ -41,5 +43,9 @@ def create_organization(
 @router.get("/", response_model=list[OrganizationOut])
 def get_organizations(
     db: Session = Depends(get_db),
+    current_user: dict = Depends(require_role(["admin"]))
 ):
-    return db.query(Organization).all()
+
+    return db.query(Organization).filter(
+        Organization.id == current_user["organization_id"]
+    ).all()

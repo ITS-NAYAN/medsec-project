@@ -123,71 +123,99 @@ export default function AdminUsers() {
   // =========================================
   // Create User
   // =========================================
-  const createUser = async () => {
+const createUser = async () => {
 
-    const token = localStorage.getItem("token");
+  const token = localStorage.getItem("token");
 
-    if (!newUser.full_name.trim()) return;
+  if (!newUser.full_name.trim()) {
+    alert("Enter full name");
+    return;
+  }
 
-    if (!newUser.email.trim()) return;
+  if (!newUser.email.trim()) {
+    alert("Enter email");
+    return;
+  }
 
-    if (!newUser.password || newUser.password.length < 6) return;
+  if (!newUser.password || newUser.password.length < 6) {
+    alert("Password must be at least 6 characters");
+    return;
+  }
 
-    if (!newUser.role || !newUser.clinic_id) return;
+  if (!newUser.role) {
+    alert("Select role");
+    return;
+  }
 
-    try {
+  if (!newUser.clinic_id) {
+    alert("Select clinic");
+    return;
+  }
 
-      setCreating(true);
+  try {
 
-      const response = await fetch(
-        "http://127.0.0.1:8000/users/",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-          body: JSON.stringify({
-            full_name: newUser.full_name,
-            email: newUser.email,
-            password: newUser.password,
-            role: newUser.role,
-            clinic_id: Number(newUser.clinic_id),
-          }),
-        }
-      );
+    setCreating(true);
 
-      if (!response.ok) {
+    const response = await fetch(
+      "http://127.0.0.1:8000/users/",
+      {
+        method: "POST",
 
-        alert("Failed to create user");
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
 
-        return;
+        body: JSON.stringify({
+          full_name: newUser.full_name,
+          email: newUser.email,
+          password: newUser.password,
+          role: newUser.role,
+          clinic_id: Number(newUser.clinic_id),
+        }),
       }
+    );
 
-      setShowCreateModal(false);
+    // ✅ IMPORTANT
+    const data = await response.json();
 
-      setNewUser({
-        full_name: "",
-        email: "",
-        password: "",
-        role: "",
-        clinic_id: "",
-      });
+    console.log("CREATE USER RESPONSE:", data);
 
-      fetchUsers();
+    // ✅ SHOW REAL ERROR
+    if (!response.ok) {
 
-    } catch (error) {
+      alert(data.detail || "Failed to create user");
 
-      console.error("Create User Error:", error);
-
-      alert("Network Error");
-
-    } finally {
-
-      setCreating(false);
-
+      return;
     }
-  };
+
+    // ✅ SUCCESS
+    alert("User created successfully");
+
+    setShowCreateModal(false);
+
+    setNewUser({
+      full_name: "",
+      email: "",
+      password: "",
+      role: "",
+      clinic_id: "",
+    });
+
+    fetchUsers();
+
+  } catch (error) {
+
+    console.error("Create User Error:", error);
+
+    alert("Network Error");
+
+  } finally {
+
+    setCreating(false);
+
+  }
+};
 
   // =========================================
   // Filter Users

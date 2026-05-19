@@ -4,7 +4,6 @@ services:
 
   medsec-postgres:
     image: postgres:16
-
     container_name: medsec-postgres
 
     environment:
@@ -12,22 +11,14 @@ services:
       POSTGRES_PASSWORD: Medsec2424
       POSTGRES_DB: medsec_db
 
-    ports:
-      - "5432:5432"
-
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
     restart: unless-stopped
 
-
   backend:
     build: ./backend
-
     container_name: medsec-backend
-
-    ports:
-      - "8000:8000"
 
     depends_on:
       - medsec-postgres
@@ -37,6 +28,17 @@ services:
 
     restart: unless-stopped
 
+  frontend:
+    build: ./frontend
+    container_name: medsec-frontend
+
+    ports:
+      - "80:80"
+
+    depends_on:
+      - backend
+
+    restart: unless-stopped
 
 volumes:
   postgres_data:

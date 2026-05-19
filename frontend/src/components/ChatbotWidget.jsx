@@ -1,5 +1,6 @@
 import { useState } from "react";
 import AIEligibilityAssistant from "./ai/AIEligibilityAssistant";
+import chatbotImage from "../assets/chatbot.png";
 
 export default function ChatbotWidget() {
   const [open, setOpen] = useState(false);
@@ -7,29 +8,35 @@ export default function ChatbotWidget() {
   return (
     <>
       {/* Floating Chat Button */}
-      <button
-        onClick={() => setOpen(!open)}
-        className="
-          fixed
-          bottom-6
-          right-6
-          bg-blue-600
-          hover:bg-blue-700
-          text-white
-          w-14
-          h-14
-          rounded-full
-          shadow-lg
-          text-2xl
-          z-50
-          flex
-          items-center
-          justify-center
-          transition
-        "
-      >
-        💬
-      </button>
+<button
+  onClick={() => setOpen(!open)}
+  className="
+    fixed
+    -bottom-10
+    -right-10
+    w-80
+    h-80
+    z-50
+    flex
+    items-center
+    justify-center
+    hover:scale-105
+    transition-all
+    duration-300
+  "
+>
+  <img
+    src={chatbotImage}
+    alt="Chatbot"
+    className="
+      w-full
+      h-full
+      object-contain
+      scale-150
+      drop-shadow-[0_0_18px_rgba(59,130,246,0.35)]
+    "
+  />
+</button>
 
       {/* Chat Popup */}
       {open && (

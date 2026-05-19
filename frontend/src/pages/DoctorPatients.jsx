@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import DoctorNavbar from "../components/DoctorNavbar";
+import ChatbotWidget from "../components/ChatbotWidget";
 
 export default function DoctorPatients() {
 
@@ -996,7 +997,7 @@ export default function DoctorPatients() {
             </div>
 
           )}
-
+<ChatbotWidget />
         </div>
 
       </main>

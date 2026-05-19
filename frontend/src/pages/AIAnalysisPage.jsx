@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 
 import DoctorNavbar from "../components/DoctorNavbar";
-import ChatbotWidget from "../components/ChatbotWidget";
 
 export default function AIAnalysisPage() {
 
@@ -897,7 +896,6 @@ ${data.summary.medicines || "N/A"}
 
       </main>
 
-      <ChatbotWidget />
     </>
   );
 }

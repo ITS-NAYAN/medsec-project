@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 
 import DoctorNavbar from "../components/DoctorNavbar";
-import ChatbotWidget from "../components/ChatbotWidget";
 
 export default function DoctorRecords() {
 
@@ -1024,7 +1023,6 @@ export default function DoctorRecords() {
 
       )}
 
-      <ChatbotWidget />
     </>
   );
 }
