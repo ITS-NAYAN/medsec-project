@@ -1,4 +1,5 @@
 # backend/app/main.py
+
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -37,22 +38,26 @@ from app.ai.routes.chatbot_routes import router as chatbot_router
 # ================= CREATE DATABASE TABLES =================
 Base.metadata.create_all(bind=engine)
 
-
 # ================= FASTAPI APP =================
 app = FastAPI(
     title="MedSec Backend"
 )
 
-
 # ================= CORS =================
+origins = [
+    "http://localhost",
+    "http://localhost:5173",
+    "http://127.0.0.1",
+    "http://127.0.0.1:5173",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # ⚠️ Restrict in production
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 # ================= MAIN ROUTES =================
 app.include_router(auth_router)
@@ -83,6 +88,7 @@ app.include_router(
     prefix="/ai-analysis",
     tags=["AI Analysis"]
 )
+
 # ================= STATIC FILES =================
 UPLOAD_DIR = "uploads"
 
@@ -96,3 +102,10 @@ app.mount(
     StaticFiles(directory=UPLOAD_DIR),
     name="uploads"
 )
+
+# ================= ROOT HEALTH CHECK =================
+@app.get("/")
+def root():
+    return {
+        "message": "MedSec Backend Running Successfully"
+    }
